@@ -1,2 +1,14 @@
 version: 4.2.1.5
-name: foooooo
+name: foooooo # this one does not show as is overriden with server data what is good!!!
+
+argocd:
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    - Validate=true
+    - RespectIgnoreDifferences=true
+    - FailOnSharedResource=true
+    automated:
+      prune: true
+      selfHeal: true
+
